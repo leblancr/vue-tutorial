@@ -20,7 +20,11 @@ const titleClass = ref('title')
 <template>
   <h1 :class="titleClass">{{ message }}</h1>
   <p>Count is: {{ counter.count }}</p>
+  <p>Count is: {{ counter.count }}</p>
   <span>Message: {{ props.msg }}</span>
+  <span>Message: {{ props.msg }}</span>
+  <p>Count is: <span>{{ counter.count }}</span></p>
+  <p>Message: <span>{{ props.msg }}</span></p>
 </template>
 
 <style scoped>

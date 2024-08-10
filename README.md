@@ -4,4 +4,8 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
 
+To start:
+npm run dev
+
+Flow:
 index.html -> main.ts -> App.vue -> components/HelloWorld.vue
