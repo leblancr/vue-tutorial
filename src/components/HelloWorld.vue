@@ -1,34 +1,15 @@
 <script setup lang="ts">
-import { reactive, ref, defineProps } from 'vue'
+import { ref } from 'vue'
 
-// Define the props interface
-interface Props {
-  msg: string
-}
-
-const props = defineProps<Props>()  // Use defineProps with the Props type
-const counter = reactive({ count: 0 })
-const message = ref('Hello World!')  // initial value
-console.log(counter.count) // "Hello World!"
-console.log(message.value) // 0
-counter.count = 1
-message.value = 'Changed'
-const titleClass = ref('title')
+const text1 = ref('')
+const text2 = ref('')
 
 </script>
 
 <template>
-  <h1 :class="titleClass">{{ message }}</h1>
-  <p>Count is: {{ counter.count }}</p>
-  <p>Count is: {{ counter.count }}</p>
-  <span>Message: {{ props.msg }}</span>
-  <span>Message: {{ props.msg }}</span>
-  <p>Count is: <span>{{ counter.count }}</span></p>
-  <p>Message: <span>{{ props.msg }}</span></p>
+  <input v-model="text1" placeholder="Type here1">
+  <span>{{ text1 }}</span>
+  <input v-model="text2" placeholder="Type here2">
+  <p>{{ text1 }}</p>
+  <span>{{ text2 }}</span>
 </template>
-
-<style scoped>
-.title {
-  color: red;
-}
-</style>
